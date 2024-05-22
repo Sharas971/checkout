@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .input {
+        flex: 1;
+        padding: $base-spacing-m;
+        box-sizing: border-box;
+        border: 1px solid $light-grey-color;
+        border-radius: $border-radius;
+        font-size: $font-m;
+        line-height: $line-height-m;
+        width: 100%;
+
+        &::placeholder {
+            color: $placeholder-color;
+        }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}

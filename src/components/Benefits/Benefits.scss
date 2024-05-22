@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+.benefits {
+    text-align: center;
+    background: $grey-color;
+
+    @media (max-width: 768px) {
+        padding: 0 $base-spacing-m 0;
+    }
+
+    &__heading {
+        position: relative;
+        display: inline-block;
+        font-size: $font-m;
+        font-weight: $font-weight-s;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background-color: $light-grey-color;
+            z-index: 1;
+
+            @media (max-width: 768px) {
+                width: 70%;
+            }
+        }
+
+        &::before {
+            left: -110%;
+
+            @media (max-width: 768px) {
+                left: -75%;
+            }
+        }
+
+        &::after {
+            right: -110%;
+
+            @media (max-width: 768px) {
+                right: -75%;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

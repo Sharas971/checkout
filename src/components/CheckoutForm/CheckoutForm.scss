@@ -1,0 +1,35 @@
+@import "../../styles/variables";
+
+.mobile-spacer {
+    @media (max-width: 768px) {
+        height: $base-spacing-m;
+        background: $grey-color;
+    }
+}
+
+.button-wrapper {
+    @media (max-width: 768px) {
+        padding: 0 $base-spacing-m;
+    }
+}
+
+.lock-image {
+    height: 14px;
+    width: auto;
+    fill: $placeholder-color;
+}
+
+.form-container {
+    padding-bottom: $base-spacing-m;
+
+    @media (max-width: 768px) {
+        border-bottom: 1px solid $light-grey-color;
+    }
+}
+
+.encrypted-text {
+    margin-left: calc($base-spacing-m / 2);
+    font-weight: $font-weight-s;
+    font-size: $font-m;
+    color: $placeholder-color;
+}

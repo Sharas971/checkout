@@ -1,0 +1,61 @@
+@import '../../styles/variables';
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.select {
+    width: 100%;
+    padding: $base-spacing-m;
+    font-size: $font-m;
+    line-height: $line-height-m;
+    border: 1px solid $light-grey-color;
+    border-radius: $border-radius;
+    appearance: none;
+    background: none;
+    cursor: pointer;
+    text-indent: 1px;
+    text-overflow: '';
+
+    &.selected {
+        padding-top: $base-spacing-m;
+        padding-bottom: $base-spacing-m;
+        color: transparent;
+
+        option {
+            padding: calc($base-spacing-m/2);
+            color: $black-color;
+        }
+    }
+}
+
+.selected-content {
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: $base-spacing-m;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.placeholder {
+    font-size: $font-s;
+    color: $placeholder-color;
+}
+
+.selected-value {
+    font-size: $font-m;
+    color: $black-color;
+}
+
+.arrow {
+    position: absolute;
+    top: 45%;
+    right: $base-spacing-m;
+    transform: translateY(-50%);
+    pointer-events: none;
+}

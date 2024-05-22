@@ -1,0 +1,55 @@
+@import "./variables";
+
+.error-text {
+    font-size: $font-s;
+    font-weight: $font-weight-s;
+    color: $error-color;
+    margin-top: $base-spacing-m;
+    text-align: left;
+}
+
+.button {
+    width: 100%;
+    font-size: $font-l;
+    font-weight: $font-weight-l;
+    line-height: 24px;
+    color: $white-color;
+    padding: $base-spacing-m;
+    margin: $base-spacing-s 0;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button-primary {
+    background-color: $primary-color;
+}
+
+.button-primary:hover {
+    background-color: darken($primary-color, 10%);
+}
+
+.text-medium-size {
+    font-size: $font-m;
+}
+
+.text-small-size {
+    font-size: $font-s;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.block-title {
+    line-height: $line-height-l;
+    font-size: $font-xl;
+    text-align: left;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    gap: $base-spacing-s;
+}

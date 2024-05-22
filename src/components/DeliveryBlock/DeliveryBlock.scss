@@ -1,0 +1,89 @@
+@import '../../styles/variables';
+
+.delivery-block {
+    padding-bottom: $base-spacing-m;
+
+    @media (max-width: 768px) {
+        padding: 0 $base-spacing-m $base-spacing-m;
+        border-bottom: 1px solid $light-grey-color;
+        border-top: 1px solid $light-grey-color;
+    }
+
+    .delivery-grid {
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "firstName firstName firstName lastName lastName lastName"
+            "address address address address address address"
+            "city city state state postalCode postalCode"
+            "country country country country country country";
+        gap: $base-spacing-m $base-spacing-s;
+
+        .grid-first-name {
+            grid-area: firstName;
+        }
+
+        .grid-last-name {
+            grid-area: lastName;
+        }
+
+        .grid-address {
+            grid-area: address;
+        }
+
+        .grid-city {
+            grid-area: city;
+        }
+
+        .grid-state {
+            grid-area: state;
+        }
+
+        .grid-postal-code {
+            grid-area: postalCode;
+        }
+
+        .grid-country {
+            grid-area: country;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "firstName lastName"
+                "address address"
+                "city city"
+                "state postalCode"
+                "country country";
+            gap: $base-spacing-m $base-spacing-s;
+
+            .grid-first-name {
+                grid-area: firstName;
+            }
+
+            .grid-last-name {
+                grid-area: lastName;
+            }
+
+            .grid-address {
+                grid-area: address;
+            }
+
+            .grid-city {
+                grid-area: city;
+            }
+
+            .grid-state {
+                grid-area: state;
+            }
+
+            .grid-postal-code {
+                grid-area: postalCode;
+            }
+
+            .grid-country {
+                grid-area: country;
+            }
+        }
+    }
+}

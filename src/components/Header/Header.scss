@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.header-wrapper {
+  width: 100%;
+  background: $white-color;
+  border-bottom: 1px solid $light-grey-color;
+
+  .header {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $base-spacing-m 0;
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      padding: $base-spacing-m;
+    }
+  }
+
+  .header-logo {
+    height: 40px;
+    width: auto;
+  }
+
+  .header-icon {
+    width: 20px;
+    height: 20px;
+    fill: $black-color;
+  }
+}

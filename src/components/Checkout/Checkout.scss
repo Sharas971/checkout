@@ -1,0 +1,45 @@
+@import "../../styles/variables";
+
+.checkout-container {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "form price"
+        "form benefits";
+    gap: 24px 76px;
+
+    .grid-checkout-form {
+        grid-area: form;
+    }
+
+    .grid-checkout-price {
+        grid-area: price;
+    }
+
+    .grid-benefits {
+        grid-area: benefits;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "price"
+            "form"
+            "benefits";
+        gap: 0px;
+
+        .grid-checkout-form {
+            grid-area: form;
+        }
+
+        .grid-checkout-price {
+            grid-area: price;
+        }
+
+        .grid-benefits {
+            grid-area: benefits;
+        }
+    }
+}

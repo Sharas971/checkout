@@ -1,3 +1,5 @@
+@import "./styles/variables";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +7,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  background: linear-gradient(90deg, $white-color 50%, $grey-color 50%);
+
+  @media (max-width: 768px) {
+    background: $white-color;
+  }
 }
 
 code {

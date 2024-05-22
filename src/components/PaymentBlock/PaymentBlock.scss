@@ -1,0 +1,117 @@
+@import '../../styles/variables';
+
+.payment-block {
+    @media (max-width: 768px) {
+        padding: 0 $base-spacing-m;
+        border-top: 1px solid $light-grey-color;
+    }
+
+    .security-text {
+        line-height: $line-height-s;
+        color: $placeholder-color;
+        font-size: $font-s;
+        text-align: left;
+        margin-bottom: calc($base-spacing-m / 2);
+        margin-bottom: $base-spacing-m;
+    }
+
+    .credit-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $base-spacing-m;
+        border: 1px solid $blue-border-color;
+        background-color: $blue-fill-color;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: $base-spacing-s;
+
+            .dot {
+                width: 20px;
+                height: auto;
+            }
+
+            label {
+                font-size: $font-m;
+                line-height: $line-height-m;
+                color: $black-color;
+            }
+        }
+
+        .right-section {
+            display: flex;
+            gap: 3px;
+
+            .logo {
+                width: 36px;
+                height: auto;
+            }
+        }
+    }
+
+    .credit-card {
+        align-items: center;
+        padding: $base-spacing-s;
+        border: 1px solid $light-grey-color;
+        background-color: $grey-fill-color;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+
+        .payment-grid {
+            display: grid;
+            position: relative;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto 1fr;
+            grid-template-areas: "cardNumber cardNumber"
+                "expiration securityCode"
+                "cardName cardName";
+            gap: $base-spacing-m $base-spacing-s;
+
+            .grid-card-number {
+                grid-area: cardNumber;
+            }
+
+            .grid-expiration {
+                grid-area: expiration;
+            }
+
+            .grid-security-code {
+                grid-area: securityCode;
+            }
+
+            .grid-card-name {
+                grid-area: cardName;
+            }
+
+
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas: "cardNumber cardNumber"
+                    "expiration securityCode"
+                    "cardName cardName";
+                gap: $base-spacing-m $base-spacing-s;
+
+                .grid-card-number {
+                    grid-area: cardNumber;
+                }
+
+                .grid-expiration {
+                    grid-area: expiration;
+                }
+
+                .grid-security-code {
+                    grid-area: securityCode;
+                }
+
+                .grid-card-name {
+                    grid-area: cardName;
+                }
+            }
+        }
+    }
+
+}

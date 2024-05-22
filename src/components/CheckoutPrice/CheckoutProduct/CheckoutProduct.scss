@@ -1,0 +1,39 @@
+@import "../../../styles/variables";
+
+.product-container {
+  display: flex;
+  align-items: center;
+
+  .image-wrapper {
+    position: relative;
+    display: inline-block;
+
+    .product-image {
+      display: block;
+      max-width: 100%;
+      border-radius: $border-radius-s;
+      border: 1px solid $light-grey-color;
+    }
+
+    .quantity {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: $dark-grey;
+      color: $white-color;
+      border-radius: 50%;
+      padding: 5px 10px;
+      font-size: $font-s;
+      font-weight: $font-weight-l;
+    }
+  }
+
+  .title {
+    margin-left: $base-spacing-m;
+    font-size: $font-m;
+    font-weight: $font-weight-l;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
